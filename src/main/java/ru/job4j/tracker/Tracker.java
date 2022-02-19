@@ -52,8 +52,4 @@ public class Tracker {
         }
         return false;
     }
-
-//    public boolean delete(int id) {
-//
-//    }
 }
