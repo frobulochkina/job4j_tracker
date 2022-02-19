@@ -26,7 +26,7 @@ public class Library {
         System.out.println("Book with name Clean code:");
         for (int index = 0; index < arrBook.length; index++) {
             Book book = arrBook[index];
-            if (book.getName().equals("Clean code")) {
+            if ("Clean code".equals(book.getName())) {
                 System.out.println("In the book " + book.getName() + " " + book.getCountPaged() + " paged");
             }
         }
