@@ -60,12 +60,10 @@ public class Tracker {
         int index = indexOf(id);
         boolean rsl = index != -1;
         if (rsl) {
-            items[index] = null;
             System.arraycopy(items, index, items, index, size - index - 1);
             items[size - 1] = null;
             size--;
-            return true;
         }
-        return false;
+        return rsl;
     }
 }
