@@ -1,6 +1,6 @@
 package ru.job4j.tracker;
 
-public class ExitingTheProgram implements UserAction{
+public class ExitingTheProgram implements UserAction {
     @Override
     public String name() {
         return "Exit Program";
