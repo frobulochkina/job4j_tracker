@@ -2,7 +2,7 @@ package ru.job4j.ooa;
 
 import org.w3c.dom.ls.LSOutput;
 
-public final class Airbus extends Aircraft{
+public final class Airbus extends Aircraft {
     private static final int COUNT_ENGINE = 2;
     private String name;
 
