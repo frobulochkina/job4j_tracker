@@ -21,10 +21,8 @@ public class ValidateInputTest {
     @Test
     public void whenNegativeInput() {
         Output out = new StubOutput();
-        String[] arr;
-        Input in = new StubInput(
-                arr = new String[] {"-2", "-4", "-8"}
-        );
+        String[] arr = new String[] {"-2", "-4", "-8"};
+        Input in = new StubInput(arr);
         ValidateInput input = new ValidateInput(out, in);
         int selected = 0;
         for (int i = 0; i < arr.length; i++) {
@@ -47,10 +45,8 @@ public class ValidateInputTest {
     @Test
     public void whenEverythingRight() {
         Output out = new StubOutput();
-        String[] arr;
-        Input in = new StubInput(
-                arr = new String[] {"1", "4", "2"}
-        );
+        String[] arr = new String[] {"1", "4", "2"};
+        Input in = new StubInput(arr);
         ValidateInput input = new ValidateInput(out, in);
         int selected = 0;
         for (int i = 0; i < arr.length; i++) {
