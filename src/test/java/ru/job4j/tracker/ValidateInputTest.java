@@ -21,13 +21,13 @@ public class ValidateInputTest {
     @Test
     public void whenNegativeInput() {
         Output out = new StubOutput();
-        String[] arr = new String[] {"-2", "-4", "-8"};
-        Input in = new StubInput(arr);
+        Input in = new StubInput(
+                new String[] {"-2", "-4", "-8"}
+        );
         ValidateInput input = new ValidateInput(out, in);
-        int selected = 0;
-        for (int i = 0; i < arr.length; i++) {
-            selected = input.askInt("Enter menu:");
-        }
+        input.askInt("Enter menu:");
+        input.askInt("Enter menu:");
+        int selected = input.askInt("Enter menu:");
         assertThat(selected, is(-8));
     }
 
@@ -45,13 +45,13 @@ public class ValidateInputTest {
     @Test
     public void whenEverythingRight() {
         Output out = new StubOutput();
-        String[] arr = new String[] {"1", "4", "2"};
-        Input in = new StubInput(arr);
+        Input in = new StubInput(
+                new String[] {"1", "4", "2"}
+        );
         ValidateInput input = new ValidateInput(out, in);
-        int selected = 0;
-        for (int i = 0; i < arr.length; i++) {
-            selected = input.askInt("Enter menu:");
-        }
+        input.askInt("Enter menu:");
+        input.askInt("Enter menu:");
+        int selected = input.askInt("Enter menu:");
         assertThat(selected, is(2));
     }
 }
